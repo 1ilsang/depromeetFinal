@@ -25,7 +25,11 @@ router.post('/', function(req, res, next) {
                 dataList[i] = {
                     location: data.data.results[i].geometry.location,
                     name: data.data.results[i].name,
-                    rating: data.data.results[i].rating
+                    rating: data.data.results[i].rating,
+                    centerLocation: {
+                        lat: centerLat,
+                        lon: centerLon
+                    }
                 }
             }
             console.log(dataList);
